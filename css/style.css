@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@600&family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page {
+  padding: 20px 24px 42px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 64px;
+  min-height: 100vh;
+}
+
+.page .header__title {
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 25px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.page .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.page .main__image_container {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+.page .main__image_container .main__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.page .main .title {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 71px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.page .main .text {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #4f4f4f;
+}
+
+.page .main .button {
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: #333333;
+  text-decoration: none;
+  padding: 24px 43px;
+  display: inline-block;
+  margin: 66px 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.page .main .button:hover {
+  background: #4f4f4f;
+}
+
+.page .footer {
+  -ms-grid-row-align: end;
+      align-self: end;
+  display: -ms-grid;
+  display: grid;
+}
+
+.page .footer .address {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  place-self: center;
+  font-style: normal;
+}
+
+@media (min-width: 640px) {
+  .page {
+    max-width: 1024px;
+    margin: auto;
+  }
+  .page .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=style.css.map */
