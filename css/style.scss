@@ -57,6 +57,8 @@ $white: #ffffff;
         width: 100%;
         height: 100%;
         object-fit: contain;
+        animation: image_animation 1850ms ease-in 1500ms;
+        animation-fill-mode: forwards;
       }
     }
 
@@ -76,6 +78,7 @@ $white: #ffffff;
       display: inline-block;
       margin: 66px 0;
       transition: all 0.2s ease-in-out;
+      transform-origin: bottom;
 
       &:hover {
         background: $gray2;
@@ -129,5 +132,20 @@ $white: #ffffff;
       display: flex;
       flex-direction: row;
     }
+  }
+}
+
+@keyframes image_animation {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-50px) translateX(20px);
+  }
+  60% {
+    transform: translateY(-50px) translateX(20px) rotateZ(360deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotateZ(360deg);
   }
 }
