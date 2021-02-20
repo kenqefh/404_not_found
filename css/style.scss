@@ -31,7 +31,7 @@ $white: #ffffff;
 }
 
 .page {
-  padding: 20px 24px 42px;
+  padding: 20px 24px 0px;
   display: grid;
   grid-template-rows: auto;
   gap: 64px;
@@ -85,11 +85,37 @@ $white: #ffffff;
 
   .footer {
     align-self: end;
-    display: grid;
-    .address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 64px;
+
+    &__address {
       @include text($font-family-secondary, 600, 14px, 17px, $gray);
-      place-self: center;
-      font-style: normal;
+    }
+    &__link {
+      @include text($font-family-secondary, 600, 14px, 17px, $gray);
+      text-decoration: none;
+      position: relative;
+    }
+    &__link::after {
+      content: "";
+      background-color: #4f4f4f;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 2px;
+      border-radius: 1.5px;
+      width: 0px;
+    }
+    &__link:hover::after {
+      width: 100%;
+      transition-property: all;
+      transform-origin: right;
+      transition-duration: 575ms;
+      transition-delay: 180ms;
     }
   }
 }
